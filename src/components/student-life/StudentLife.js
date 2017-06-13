@@ -18,11 +18,14 @@ class StudentLife extends React.Component {
               <p className="lead">Our curriculum is built internally and consistently updated along with the quickly changing tech scene.  While each day is unique, the core of our program is morning lectures, followed by personalized learning time where students work through exercises at their own pace to master content objectives.</p>
             </Col>
             <Col sm='12' className="timeline-col">
-              <Row className="callout-header">
-                <h3 className="callout">
-                  <img className="arrow" src={require("../../images/arrow.png")}/> &nbsp;Daily Plan</h3>
-              </Row>
+              <div className='section-headline'>
+                <h2 className='headline'>Daily Plan</h2>
+              </div>
               <Timeline/>
+                <div className='section-headline'>
+                  <h2 className='headline'>What You Will Learn</h2>
+
+                </div>
             </Col>
             </div>
         );
