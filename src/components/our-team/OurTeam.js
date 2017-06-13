@@ -18,29 +18,48 @@ class OurTeam extends React.Component {
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">
               <Card block className="text-center">
                 <CardTitle>Instructors</CardTitle>
-                <CardText className="description">Teaching web development requires unique people dedicated to their students learning.  We have them.</CardText>
-                <Button>See Individual Profiles</Button>
+                  <img className="profile-photo" src={require("../../images/kyle.jpg")}/>
+                    <a href="https://www.linkedin.com/in/kylecoberly/" className="name">Kyle Coberly</a>
+                    <p className="title-location">Faculty Director | Denver, CO</p>
+                    <p className="description">Teaching web development requires unique people dedicated to student comprehension.  We have them.  Our instructors have real world development experience along with proven teaching capabilities.</p>
+                <Button>Instructor Profiles</Button>
               </Card>
               </Col>
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">
               <Card block className="text-center">
                 <CardTitle>Career Services</CardTitle>
-                <CardText className="description">We prepare students to leverage their new technical skills into a career as a full-stack developer.</CardText>
+                    <img className="profile-photo" src={require("../../images/james.jpg")}/>
+                      <a href="https://www.linkedin.com/in/namesjames/" className="name">James Conti</a>
+                      <p className="title-location">Career Services Manager | Denver, CO</p>
+                      <p className="description">We prepare students to leverage their new technical skills into a career as a full-stack developer.  Resume and cover letter editing, whiteboarding practice, networking intros, we're here for you. </p>
                 <Button>See the Team</Button>
               </Card>
               </Col>
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">
               <Card block className="text-center">
                 <CardTitle>Student Success</CardTitle>
-                <CardText className="description">Our Student Success team ensures your experience as a Galvanize student is everything you imagined it could be.</CardText>
-                <Button>See Profile</Button>
+                    <img className="profile-photo" src={require("../../images/kelly.jpg")}/>
+                      <a href="https://www.linkedin.com/in/kellyannekawa/" className="name">Kelly Kawa</a>
+                      <p className="title-location">Student Success Manager | Denver, CO</p>
+                      <p className="description">We ensure your experience as a Galvanize student is everything you imagined it could be. From support counseling, to events, to snack supplies, we're here for you.</p>
+                  <Button>Student Life</Button>
               </Card>
               </Col>
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">
               <Card block className="text-center">
                 <CardTitle>Entrepreneurs</CardTitle>
-                <CardText className="description">Learn and network surrounded by startup companies in an array of industries.</CardText>
-                <Button>List of Tenants</Button>
+                <div className="company-logos">
+                  <img className="company-logo" src={require("../../images/clickfox.jpg")}/>
+                  <img className="company-logo" src={require("../../images/mozilla.png")}/>
+                  <img className="company-logo" src={require("../../images/havenly.jpg")}/>
+                  <img className="company-logo" src={require("../../images/pandora.png")}/>
+                  <img className="company-logo" src={require("../../images/cybercar.png")}/>
+                  <img className="company-logo" src={require("../../images/303magazine.png")}/>
+                  <img className="company-logo" src={require("../../images/acumen.png")}/>
+                  <img className="company-logo" src={require("../../images/cinearc.png")}/>
+                  <img className="company-logo" src={require("../../images/pivotal.png")}/>
+                  <p className="description">Learn and network surrounded by startup companies in an array of industries.</p>
+                </div><Button>List of Tenants</Button>
               </Card>
               </Col>
             </Row>

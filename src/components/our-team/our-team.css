@@ -38,6 +38,9 @@
 .card {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -47,7 +50,7 @@
   color: #828282;
   margin-bottom: 1rem;
   line-height: 1.4;
-  height: 15rem;
+  /*height: 15rem;*/
 }
 
 .card-title {
@@ -64,4 +67,48 @@
 
 .card-col {
   padding: 1rem;
+}
+
+.profile-pics {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.profile-photo {
+  width: 50%;
+  height: auto;
+  padding: .25rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.company-logo {
+  width: 30%;
+  height: auto;
+  padding: .25rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.profile-photo:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.name {
+  color: #00A5B5;
+  font-weight: 300;
+  text-decoration: none;
+  outline: 0;
+  transition: all .3s ease;
+}
+
+.title-location {
+  margin-top: calc(1rem/2);
+  color: #828282;
+  font-size: .833rem;
 }
