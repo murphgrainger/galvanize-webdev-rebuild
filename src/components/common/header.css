@@ -2,6 +2,15 @@
   width: 150px;
 }
 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
 .nav-link {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;

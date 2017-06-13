@@ -1,0 +1,22 @@
+.outer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../images/photo-grid.jpg');
+  background-size: cover;
+  height: 20rem;
+  margin-bottom: 2rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.our-team-headline {
+  color: #EA882C;
+  font-size: 8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px #7c7b7b;
+}
