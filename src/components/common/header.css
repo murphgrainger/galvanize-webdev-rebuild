@@ -1,0 +1,29 @@
+#logo {
+  width: 150px;
+}
+
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .0425em;
+  font-weight: 300!important;
+}
+
+.hero-section {
+  background-image: url('../../images/hero_wdi-student.jpg');
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  padding-bottom: 20px;
+  height: 30em;
+}
+
+.grid-cell {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  color: #252525;
+}
