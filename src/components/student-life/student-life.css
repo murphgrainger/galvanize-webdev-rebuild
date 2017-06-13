@@ -7,6 +7,7 @@
   background-size: cover;
   height: 20rem;
   margin-bottom: 2rem;
+  margin-top: 2rem;
   background-attachment: fixed;
   background-position: center top;
   background-repeat: no-repeat;
@@ -33,13 +34,23 @@
 }
 
 
-.headline:after {
+.headline-parallax:after {
     content: "";
     width: 50px;
     height: 3px;
-    background: #E1E1E1;
+    background: #252525;
     display: block;
     margin: auto;
     position: relative;
     bottom: -10px;
+}
+
+.lead-text-column {
+  text-align: center;
+  padding: 0rem 15rem 2rem 15rem ;
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
