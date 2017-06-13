@@ -38,6 +38,12 @@
   font-weight: 300;
 }
 
+.tech-logo {
+  height: 50px;
+  margin: .75rem;
+}
+
+
 @media (max-width: 975px) {
   .curriculum-section {
     padding:1rem;

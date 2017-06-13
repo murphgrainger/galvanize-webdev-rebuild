@@ -20,6 +20,13 @@ class Curriculum extends React.Component {
                       <p>You&#39;ll learn the fundamentals of JavaScript as well as programming fundamentals and basic algorithms. You&#39;ll learn to build web pages with HTML and style them with CSS, and you&#39;ll make web pages interactive with DOM
                         manipulation and AJAX. You&#39;ll leave this module having built your own client-side app using an agile workflow.
                       </p>
+                    <img className="tech-logo"src={require("../../images/html.png")}/>
+                    <img className="tech-logo" src={require("../../images/css.png")}/>
+                    <img className="tech-logo" src={require("../../images/javascript.png")}/>
+                    <img className="tech-logo" src={require("../../images/ajax.png")}/>
+                    <img className="tech-logo" src={require("../../images/jquery.png")}/>
+                    <img className="tech-logo" src={require("../../images/bootstrap.jpg")}/>
+                    <img className="tech-logo" src={require("../../images/materialize.png")}/>
                     </Col>
                   </div><hr/></div>
                 <div className="curriculum-block">
@@ -31,6 +38,10 @@ class Curriculum extends React.Component {
                       <p>Learn how to build and deploy dynamic server-side web apps using Node.js and Express as well as how to manageL. You&#39;ll finish this module by completing a server-side application using an agile workflow
                         with a team of classmates.
                       </p>
+                      <img className="tech-logo" src={require("../../images/node.png")}/>
+                      <img className="tech-logo" src={require("../../images/express.png")}/>
+                      <img className="tech-logo" src={require("../../images/postgres.png")}/>
+                      <img className="tech-logo" src={require("../../images/npm.png")}/>
                     </Col>
                   </div><hr/></div>
                 <div className="curriculum-block">
@@ -42,6 +53,9 @@ class Curriculum extends React.Component {
                       <p>In this module you&#39;ll combine what you learned in the front-end and server-side modules and build on that foundation by learning client-side frameworks such as AngularJS and React. You&#39;ll finish by building a complete
                         single-page application (both client-side and server-side) in a group, following an agile workflow.
                       </p>
+                    <a href="https://angularjs.org/" target="_blank"><img className="tech-logo"src={require("../../images/angular.png")}/></a>
+                    <a href="https://facebook.github.io/react/" target="_blank">  <img className="tech-logo" src={require("../../images/react.png")}/></a>
+                    <a href="https://www.emberjs.com/" target="_blank">  <img className="tech-logo" src={require("../../images/ember.png")}/></a>
                     </Col>
                   </div><hr/></div>
                 <div className="curriculum-block">
@@ -64,6 +78,7 @@ class Curriculum extends React.Component {
                       <p>Conclude the course by completing an independent capstone project that can demonstrate the full range of your skills to employers. Capstone projects combine the topics you&#39;ll learn in className plus additional technologies
                         you&#39;ll learn on your own to demonstrate your versatility and fitness for a position in an ever-changing tech landscape.
                       </p>
+                      <Button color="primary">View Student Projects</Button>
                     </Col>
                   </div>
                 </div>
