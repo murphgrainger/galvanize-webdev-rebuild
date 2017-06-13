@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button } from 'reactstrap';
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 
 import OurTeam from '../our-team/OurTeam';
 import StudentLife from '../student-life/StudentLife';
@@ -12,6 +13,10 @@ import Callout from '../callout/Callout';
 import './home.css'
 
 class HomePage extends React.Component {
+
+  componentWillMount() {
+    configureAnchors({offset: -60, scrollDuration: 200})
+  }
     render() {
         return (
           <div>
@@ -25,10 +30,14 @@ class HomePage extends React.Component {
               <p><Button color="primary">Start Your Application</Button></p>
               </Col>
             </div>
-            <Stats />
+            <Stats/>
             <Callout />
-            <OurTeam />
-            <StudentLife />
+            <ScrollableAnchor key="ourteam" id="ourteam" >
+                <OurTeam />
+            </ScrollableAnchor>
+            <ScrollableAnchor key="studentlife" id="studentlife" >
+              <StudentLife />
+            </ScrollableAnchor>
             </div>
         );
     }

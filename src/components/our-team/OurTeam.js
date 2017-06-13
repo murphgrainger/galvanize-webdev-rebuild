@@ -35,7 +35,7 @@ class OurTeam extends React.Component {
                       <a href="https://www.linkedin.com/in/namesjames/" className="name">James Conti</a>
                       <p className="title-location">Career Services Manager | Denver, CO</p>
                       <p className="description">We prepare students to leverage their new technical skills into a career as a full-stack developer. Cover letters, whiteboarding, networking...we're here.</p>
-                <Button color="primary">See How</Button>
+                <Button color="primary">Alumni Feedback</Button>
               </Card>
               </Col>
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">
@@ -45,7 +45,7 @@ class OurTeam extends React.Component {
                       <a href="https://www.linkedin.com/in/kellyannekawa/" className="name">Kelly Kawa</a>
                       <p className="title-location">Student Success Manager | Denver, CO</p>
                       <p className="description">From support counseling, to events, to snack supplies, We ensure your experience as a Galvanize student is everything you imagined it could be.</p>
-                  <Button color="primary">Student Life</Button>
+                  <Button color="primary">Student Perks</Button>
               </Card>
               </Col>
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">
@@ -63,7 +63,7 @@ class OurTeam extends React.Component {
                   <img className="company-logo" src={require("../../images/pivotal.png")}/>
                   </div>
                   <p className="description">Learn and network surrounded by companies and entrepreneurs in an array of industries.</p>
-                <Button color="primary">List of Tenants</Button>
+                <Button color="primary">Tenant List</Button>
               </Card>
               </Col>
             </Row>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ScrollableAnchor, {configureAnchors} from 'react-scrollable-anchor';
 
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
@@ -30,19 +31,19 @@ render() {
        <Collapse isOpen={this.state.isOpen} navbar>
          <Nav className="ml-auto" navbar>
            <NavItem>
-             <NavLink href="/team/">Our Team</NavLink>
+             <NavLink href="#ourteam">Our Team</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="/student-life/">Student Life</NavLink>
+             <NavLink href="#studentlife">Student Life</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="/outcomes/">Graduates</NavLink>
+             <NavLink>Graduates</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="/course-dates/">Dates</NavLink>
+             <NavLink>Dates</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="/apply/">Apply</NavLink>
+             <NavLink>Apply</NavLink>
            </NavItem>
          </Nav>
        </Collapse>
