@@ -12,10 +12,12 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0px 5px 30px #888888;
+
 }
 
 .headline-parallax {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.2;
   margin: 1.2rem 0;
   font-weight: 300;
@@ -28,7 +30,7 @@
   margin-bottom: calc(1rem*3);
   text-transform: uppercase;
   color: #EA882C;
-  background-color: #252525;
+  background-color: rgba(37,37,37, 0.8);
   padding-right: 2rem;
   padding-left: 2rem;
 }
@@ -79,6 +81,5 @@
 @media (max-width: 1090px) {
   .lead-text-column {
     padding: 0rem 5rem 0rem 5rem ;
-;
   }
 }
