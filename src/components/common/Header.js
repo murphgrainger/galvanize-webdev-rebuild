@@ -33,10 +33,10 @@ render() {
              <NavLink href="/team/">Our Team</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="/outcomes/">Graduates</NavLink>
+             <NavLink href="/student-life/">Student Life</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="/student-life/">Student Life</NavLink>
+             <NavLink href="/outcomes/">Graduates</NavLink>
            </NavItem>
            <NavItem>
              <NavLink href="/course-dates/">Dates</NavLink>
