@@ -5,6 +5,8 @@ import { Col, Row, Button } from 'reactstrap';
 import OurTeam from '../our-team/OurTeam';
 import StudentLife from '../student-life/StudentLife';
 import Stats from '../stats/Stats';
+import Callout from '../callout/Callout';
+
 
 
 import './home.css'
@@ -24,6 +26,7 @@ class HomePage extends React.Component {
               </Col>
             </div>
             <Stats />
+            <Callout />
             <OurTeam />
             <StudentLife />
             </div>
