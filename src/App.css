@@ -19,6 +19,12 @@
   color: white!important;
   border-color: #0095a3!important;
   font-weight: 300;
+  box-shadow: 2px 2px 10px #888888;
+}
+
+.btn-primary:hover {
+  background-color: #007984!important;
+  border-color: #007984!important;
 }
 
 .blue-color {
