@@ -7,9 +7,12 @@ import './student-life.css'
 class StudentLife extends React.Component {
     render() {
         return (
-          <div className="section gray">
-            <h2>Student Life</h2>
-
+          <div>
+            <div className="student-life-container">
+              <div className='section-headline'>
+                <h2 className='headline-parallax'>Student Life</h2>
+              </div>
+            </div>
             </div>
         );
     }

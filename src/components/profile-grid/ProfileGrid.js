@@ -9,7 +9,7 @@ class ProfileGrid extends React.Component {
         return (
           <div>
             <div className="outer-container">
-              <h4 className="our-team-headline">Our Team</h4>
+              <h4 className="headline-parallax">Our Team</h4>
             </div>
           </div>
         );
