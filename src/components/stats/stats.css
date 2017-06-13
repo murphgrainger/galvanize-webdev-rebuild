@@ -1,0 +1,41 @@
+.stat-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: calc(1rem*3) 0;
+  color: #4A4A4A;
+
+}
+
+.review-block, .stat-block, .cost-block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat {
+  font-size: 2.488rem;
+  line-height: 1.2;
+  margin: 1.2rem 0;
+  font-weight: 300;
+
+}
+
+em p {
+  line-height: 1.4;
+  color: #828282;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+
+}
+
+em p a {
+  color: #00A5B5;
+  font-weight: 300;
+  text-decoration: none;
+  outline: 0;
+  transition: all .3s ease;
+}

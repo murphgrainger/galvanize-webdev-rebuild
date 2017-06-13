@@ -4,6 +4,8 @@ import { Col, Row, Button } from 'reactstrap';
 
 import OurTeam from '../our-team/OurTeam';
 import StudentLife from '../student-life/StudentLife';
+import Stats from '../stats/Stats';
+
 
 import './home.css'
 
@@ -21,6 +23,7 @@ class HomePage extends React.Component {
               <p><Button color="primary">Start Your Application</Button></p>
               </Col>
             </div>
+            <Stats />
             <OurTeam />
             <StudentLife />
             </div>
