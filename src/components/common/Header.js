@@ -27,7 +27,7 @@ render() {
    <div>
      <Navbar inverse toggleable className="dark-background">
        <NavbarToggler right onClick={this.toggle} />
-       <NavbarBrand href="/"><img id="logo" src={require("../../images/galvanize_logo.png")}/></NavbarBrand>
+       <NavbarBrand><img id="logo" src={require("../../images/galvanize_logo.png")}/></NavbarBrand>
        <Collapse isOpen={this.state.isOpen} navbar>
          <Nav className="ml-auto" navbar>
            <NavItem>
