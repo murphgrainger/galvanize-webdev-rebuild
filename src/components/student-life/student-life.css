@@ -75,3 +75,10 @@
   width: 25px;
   height: 25px;
 }
+
+@media (max-width: 1090px) {
+  .lead-text-column {
+    padding: 0rem 5rem 0rem 5rem ;
+;
+  }
+}

@@ -1,0 +1,45 @@
+.curriculum-section {
+  padding: 3rem;
+}
+
+
+.curriculum-block-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.icon-col {
+  text-align: center;
+  vertical-align:bottom;
+}
+.curriculum-icon {
+  width: 200px;
+}
+
+.label {
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.074rem;
+  line-height: 1.2;
+  margin: 1.2rem 0;
+  font-weight: 300;
+}
+
+.curriculum-content p {
+  color: #828282;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 975px) {
+  .curriculum-section {
+    padding:1rem;
+  }
+}

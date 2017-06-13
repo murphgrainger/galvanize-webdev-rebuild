@@ -4,6 +4,7 @@ import { Col, Row, Button } from 'reactstrap';
 
 import './student-life.css'
 import Timeline from './../timeline/Timeline'
+import Curriculum from './../curriculum/Curriculum'
 
 class StudentLife extends React.Component {
     render() {
@@ -22,10 +23,7 @@ class StudentLife extends React.Component {
                 <h2 className='headline'>Daily Plan</h2>
               </div>
               <Timeline/>
-                <div className='section-headline'>
-                  <h2 className='headline'>What You Will Learn</h2>
-
-                </div>
+                <Curriculum />
             </Col>
             </div>
         );
