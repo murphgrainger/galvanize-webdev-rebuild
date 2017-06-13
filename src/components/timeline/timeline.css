@@ -1,0 +1,68 @@
+.timeline-outer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.schedule {
+  text-transform: uppercase;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2.2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.schedule:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.standup {
+  width: 6%;
+  background-color: #252525;
+  color: #EA882C;
+}
+
+.warmup {
+  width: 8%;
+  background-color: #cecece;
+}
+
+.lectures {
+  width: 30%;
+  background-color: #0095a3;
+  color: white;
+}
+
+.lunch {
+  width: 10%;
+  background-color: #252525;
+  color: white;
+
+}
+
+.lightening {
+  width: 10%;
+  background-color: #cecece;
+}
+
+.personalized {
+  width: 30%;
+  background-color: #0095a3;
+  color: white;
+
+}
+
+.standdown {
+  width: 6%;
+  background-color: #252525;
+  color: #EA882C
+}

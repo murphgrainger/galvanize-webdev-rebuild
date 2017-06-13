@@ -54,3 +54,11 @@
   font-size: 1.2rem;
   line-height: 1.5;
 }
+
+#timeline {
+  width: 80%;
+}
+
+.timeline-col {
+  height: 50em;
+}
