@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button } from 'reactstrap';
 
+import OurTeam from '../our-team/OurTeam';
+import StudentLife from '../student-life/StudentLife';
 
 import './home.css'
 
@@ -19,7 +21,8 @@ class HomePage extends React.Component {
               <p><Button color="primary">Start Your Application</Button></p>
               </Col>
             </div>
-
+            <OurTeam />
+            <StudentLife />
             </div>
         );
     }
