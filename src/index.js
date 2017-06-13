@@ -20,8 +20,7 @@ ReactDOM.render(
   <Router>
     <div>
       <Header />
-      <Route exact path="/" component={Home}/>
-      <Route path="/our-team" component={OurTeam}/>
+      <Home />
     </div>
   </Router>, document.getElementById('root'));
 registerServiceWorker();
