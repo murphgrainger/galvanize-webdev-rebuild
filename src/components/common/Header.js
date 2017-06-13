@@ -30,16 +30,13 @@ render() {
        <Collapse isOpen={this.state.isOpen} navbar>
          <Nav className="ml-auto" navbar>
            <NavItem>
-             <NavLink href="/why/">Why</NavLink>
+             <NavLink href="/team/">Our Team</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="/outcomes/">Outcomes</NavLink>
+             <NavLink href="/outcomes/">Graduates</NavLink>
            </NavItem>
            <NavItem>
              <NavLink href="/student-life/">Student Life</NavLink>
-           </NavItem>
-           <NavItem>
-             <NavLink href="/teachers/">Our Team</NavLink>
            </NavItem>
            <NavItem>
              <NavLink href="/course-dates/">Dates</NavLink>

@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from 'react-router';
 import { Row } from 'reactstrap';
 
-import './webdevelopment.css'
+import './our-team.css'
 
-class WebDevelopmentPage extends React.Component {
+class OurTeam extends React.Component {
     render() {
         return (
           <div>
@@ -14,4 +14,4 @@ class WebDevelopmentPage extends React.Component {
     }
 }
 
-export default WebDevelopmentPage;
+export default OurTeam;

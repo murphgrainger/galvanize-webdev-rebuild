@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Header from './components/common/Header';
 import Home from './components/home/HomePage';
-import WebDevelopmentPage from './components/webdevelopment/WebDevelopmentPage';
+import OurTeam from './components/our-team/OurTeam';
 
 
 ReactDOM.render(
@@ -21,7 +21,7 @@ ReactDOM.render(
     <div>
       <Header />
       <Route exact path="/" component={Home}/>
-      <Route path="/web-development" component={WebDevelopmentPage}/>
+      <Route path="/our-team" component={OurTeam}/>
     </div>
   </Router>, document.getElementById('root'));
 registerServiceWorker();

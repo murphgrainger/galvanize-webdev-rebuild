@@ -7,6 +7,7 @@
   text-transform: uppercase;
   letter-spacing: .0425em;
   font-weight: 300!important;
+  padding-right: 1rem!important;
 }
 
 .hero-section {
@@ -15,7 +16,6 @@
   overflow: hidden;
   background-size: cover;
   background-position: center center;
-  padding-bottom: 20px;
   height: 30em;
 }
 
@@ -25,6 +25,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 3rem;
+  margin-top: 2rem;
   color: #252525;
 }
 
