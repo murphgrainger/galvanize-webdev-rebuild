@@ -61,4 +61,17 @@
 
 .timeline-col {
   height: 50em;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.callout {
+  line-height: 1.2;
+  margin: 1.2rem 0;
+  font-weight: 300;
+}
+
+.arrow {
+  width: 25px;
+  height: 25px;
 }

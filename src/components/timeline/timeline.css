@@ -6,8 +6,6 @@
   align-items: center;
   text-align: center;
   margin: 0;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .schedule {
@@ -39,13 +37,13 @@
 .lectures {
   width: 30%;
   background-color: #0095a3;
-  color: white;
+  color: #efefef;
 }
 
 .lunch {
   width: 10%;
   background-color: #252525;
-  color: white;
+  color: #cecece;
 
 }
 
@@ -57,7 +55,7 @@
 .personalized {
   width: 30%;
   background-color: #0095a3;
-  color: white;
+  color: #efefef;
 
 }
 
