@@ -2,13 +2,11 @@ import React from 'react';
 import {Link} from 'react-router';
 import { Row, Col, Card, CardTitle, CardText, Button } from 'reactstrap';
 
-import ProfileGrid from '../profile-grid/ProfileGrid';
+import ParallaxHeader from '../parallax/ParallaxHeader';
 
 import './our-team.css'
 
 const ourTeamImage = require(`../../images/photo-grid.jpg`)
-const studentLifeImage = require(`../../images/student-life.jpg`)
-
 
 class OurTeam extends React.Component {
     render() {
@@ -20,7 +18,7 @@ class OurTeam extends React.Component {
                   <p className="lead">Galvanize campuses are designed from the ground up to be conducive to learning to code. From the classrooms and the lab space to the carefully vetted companies renting workspaces: <br></br><span>Galvanize is the learning community for technology.</span></p>
                 </Col>
             </div>
-            <ProfileGrid title="Our Team" background={ourTeamImage}/>
+            <ParallaxHeader title="Our Team" background={ourTeamImage}/>
             <Row className="card-row">
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">
               <Card block className="text-center">

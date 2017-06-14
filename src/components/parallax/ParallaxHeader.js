@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button, Card } from 'reactstrap';
 
-import './profile-grid.css'
+import './parallax.css'
 
-class ProfileGrid extends React.Component {
+class ParallaxHeader extends React.Component {
 
   componentDidMount(){
     console.log(this.props.background);
@@ -23,4 +23,4 @@ class ProfileGrid extends React.Component {
     }
 }
 
-export default ProfileGrid;
+export default ParallaxHeader;

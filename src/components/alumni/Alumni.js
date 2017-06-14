@@ -4,14 +4,31 @@ import { Col, Row, Button } from 'reactstrap';
 
 import './alumni.css'
 
+import ParallaxHeader from '../parallax/ParallaxHeader';
+
+const alumniImage = require(`../../images/g38.jpg`)
+
+
 class Alumni extends React.Component {
     render() {
         return (
           <div>
-            <div className='section-headline'>
-              <h2 className='headline'>Our Graduates</h2>
+            <ParallaxHeader title="Our Graduates" background={alumniImage}/>
+            <div className="stat-row">
+              <Col sm="12" md="4" className="review-block">
+                <h4 className="label">Number of Graduates</h4>
+                  <h2 className='stat'>650+</h2>
+              </Col>
+              <Col sm="12" md="4" className="stat-block">
+                <h4 className="label">Placement Rate</h4>
+                <h2 className='stat'>91%</h2>
+              </Col>
+              <Col sm="12" md="4" className="cost-block">
+                <h4 className="label">Average Starting Salary</h4>
+                <h2 className='stat'>$76,838</h2>
+              </Col>
             </div>
-            </div>
+          </div>
         );
     }
 }
