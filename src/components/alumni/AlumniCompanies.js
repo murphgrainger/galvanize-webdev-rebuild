@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { UncontrolledTooltip, Button, Card, CardTitle } from 'reactstrap';
+import { Button, Card, CardTitle } from 'reactstrap';
+
+import ReactTooltip from 'react-tooltip';
 
 import './alumni.css'
 
@@ -14,7 +16,10 @@ class AlumniCompanies extends React.Component {
   };
 }
 
-toggle() {
+toggle(id) {
+  if (id) {
+
+  }
    this.setState({
      tooltipOpen: !this.state.tooltipOpen
    });
@@ -30,12 +35,12 @@ toggle() {
               <a className="logo -logo-4 -sm" href="http://www.apple.com/" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_apple.png)`}}></a>
               <a className="logo -logo-5 -lg" href="https://www.dish.com" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/dish.com)`}}></a>
               <a className="logo -logo-6 -md" href="https://card.americanexpress.com" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_amex.png)`}}></a>
-              <a id="ca-tech" className="logo -logo-7 -sm" href="http://www.ca.com/" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_catechnologies.png)`}}></a>
+              <a data-tip data-for='ca-tech' className="logo -logo-7 -sm" href="http://www.ca.com/" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_catechnologies.png)`}}></a>
               <a className="logo -logo-8 -lg" href="https://www.amazon.com/" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/amazon.com)`}}></a>
               <a className="logo -logo-9 -md" href="http://us.blizzard.com/" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/blizzard.com)`}}></a>
               <a className="logo -logo-10 -lg" href="http://echostar.com/" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/echostar.com)`}}></a>
               <a className="logo -logo-11 -md" href="http://www.gap.com/" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/gap.com)`}}></a>
-              <a className="logo -logo-12 -md" href="https://www.healthgrades.com" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_healthgrades.png)`}}></a>
+              <a data-tip data-for='healthgrades' className="logo -logo-12 -md" href="https://www.healthgrades.com" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_healthgrades.png)`}}></a>
               <a id="homeadvisor"  className="logo -logo-13 -sm" href="http://www.homeadvisor.com/" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/homeadvisor.com)`}}></a>
               <a className="logo -logo-14 -sm" href="http://www.ibm.com/" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_ibm.png)`}}></a>
               <a className="logo -logo-15 -lg" href="http://www.jaybirdsport.com/" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/jaybirdsport.com)`}}></a>
@@ -54,16 +59,23 @@ toggle() {
               <a className="logo -logo-28 -lg" href="http://welltok.com/" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/welltok.com)`}}></a>
               <a className="logo -logo-29 -md" href="http://www.zappos.com/" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_zappos.png)`}}></a>
               <a className="logo -logo-30 -lg" href="http://www.zayo.com/" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_zayo.png)`}}></a>
-               <UncontrolledTooltip className="tooltip-tether" placement="right" isOpen={this.state.tooltipOpen} target="ca-tech" toggle={this.toggle}>
+               <ReactTooltip id='ca-tech' type="light"><span>
                  <Card block className="text-center">
                      <img className="profile-photo" src={require("../../images/david.jpg")}/>
                        <a href="https://www.linkedin.com/in/davidshibley" className="name">David Shibley</a>
                        <p className="title-location">Software Developer</p>
                    <Button color="primary">Contact Me</Button>
                  </Card>
-              </UncontrolledTooltip>
-
-      </div>
+               </span></ReactTooltip>
+             <ReactTooltip id='healthgrades' type="light"><span>
+               <Card block className="text-center">
+                   <img className="profile-photo" src={require("../../images/adam.jpg")}/>
+                     <a href="https://www.linkedin.com/in/poulsenadam" className="name">Adam Poulson</a>
+                     <p className="title-location">Software Developer</p>
+                 <Button color="primary">Contact Me</Button>
+               </Card>
+            </span></ReactTooltip>
+          </div>
           </div>
         );
     }
