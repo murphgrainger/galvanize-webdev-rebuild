@@ -44,7 +44,7 @@ class OurTeam extends React.Component {
                     <img className="profile-photo" src={require("../../images/kelly.jpg")}/>
                       <a href="https://www.linkedin.com/in/kellyannekawa/" className="name">Kelly Kawa</a>
                       <p className="title-location">Student Success Manager | Denver, CO</p>
-                      <p className="description">From support counseling, to events, to snack supplies, We ensure your experience as a Galvanize student is everything you imagined it could be.</p>
+                      <p className="description">From support counseling, to events, to snack supplies, we ensure your experience as a Galvanize student is everything you imagined it could be.</p>
                   <Button color="primary">Student Perks</Button>
               </Card>
               </Col>
