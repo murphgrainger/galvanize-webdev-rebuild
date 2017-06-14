@@ -5,6 +5,8 @@ import { Col, Row, Button } from 'reactstrap';
 import './alumni.css'
 
 import ParallaxHeader from '../parallax/ParallaxHeader';
+import AlumniCompanies from './AlumniCompanies';
+
 
 const alumniImage = require(`../../images/g38.jpg`)
 
@@ -28,6 +30,7 @@ class Alumni extends React.Component {
                 <h2 className='stat'>$76,838</h2>
               </Col>
             </div>
+            <AlumniCompanies />
           </div>
         );
     }
