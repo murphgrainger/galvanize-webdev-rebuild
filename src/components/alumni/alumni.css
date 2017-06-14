@@ -240,6 +240,15 @@
   z-index: 999;
 }
 
+.tooltip-tether {
+  background: none;
+}
+
+.tooltip-card {
+  width: 20rem;
+  height: 20rem;
+  color: black;
+}
 
 @media (max-width: 975px) {
   .curriculum-section {
