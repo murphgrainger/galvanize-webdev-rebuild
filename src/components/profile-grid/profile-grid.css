@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../../images/photo-grid.jpg');
   background-size: cover;
   height: 20rem;
   margin-bottom: 3rem;

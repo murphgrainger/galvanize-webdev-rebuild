@@ -5,11 +5,18 @@ import { Col, Row, Button, Card } from 'reactstrap';
 import './profile-grid.css'
 
 class ProfileGrid extends React.Component {
+
+  componentDidMount(){
+    console.log(this.props.background);
+
+
+
+  }
     render() {
         return (
           <div>
-            <div className="outer-container">
-              <h4 className="headline-parallax">Our Team</h4>
+            <div className="outer-container" style={{backgroundImage: `url(${this.props.background})`}}>
+              <h4 className="headline-parallax">{this.props.title}</h4>
             </div>
           </div>
         );
