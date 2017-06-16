@@ -6,6 +6,8 @@ import './alumni.css'
 
 import ParallaxHeader from '../parallax/ParallaxHeader';
 import AlumniCompanies from './AlumniCompanies';
+import AlumniPanel from './AlumniPanel';
+
 
 
 const alumniImage = require(`../../images/g38.jpg`)
@@ -31,6 +33,7 @@ class Alumni extends React.Component {
               </Col>
             </div>
             <AlumniCompanies />
+            <AlumniPanel />
           </div>
         );
     }
