@@ -75,7 +75,7 @@ class Curriculum extends React.Component {
                     <Col xs='12' sm='12' md='9' className="curriculum-content">
                       <h4 className="label"></h4>
                       <h3 className="title">Capstone Project</h3>
-                      <p>Conclude the course by completing an independent capstone project that can demonstrate the full range of your skills to employers. Capstone projects combine the topics you&#39;ll learn in className plus additional technologies
+                      <p>Conclude the course by completing an independent capstone project that can demonstrate the full range of your skills to employers. Capstone projects combine the topics you&#39;ll learn in class plus additional technologies
                         you&#39;ll learn on your own to demonstrate your versatility and fitness for a position in an ever-changing tech landscape.
                       </p>
                       <Button color="primary">View Student Projects</Button>
