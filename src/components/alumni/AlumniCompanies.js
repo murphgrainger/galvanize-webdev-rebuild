@@ -42,7 +42,7 @@ class AlumniCompanies extends React.Component {
               <a className="logo -logo-28 -lg" href="http://welltok.com/" target="_blank" style={{backgroundImage:`url(https://logo.clearbit.com/welltok.com)`}}></a>
               <a className="logo -logo-29 -md" href="http://www.zappos.com/" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_zappos.png)`}}></a>
               <a className="logo -logo-30 -lg" href="http://www.zayo.com/" target="_blank" style={{backgroundImage:`url(https://d1cvw29nua6zwm.cloudfront.net/logos/company-logo_zayo.png)`}}></a>
-               <ReactTooltip id='ca-tech' type="light" data-event="hover" data-event-off="onMouseLeave"><span>
+               <ReactTooltip id='ca-tech' type="light" delayHide={500}><span>
                  <Card block className="text-center">
                      <img className="profile-photo" src={require("../../images/david.jpg")}/>
                        <a href="https://www.linkedin.com/in/davidshibley" className="name">David Shibley</a>
@@ -50,7 +50,7 @@ class AlumniCompanies extends React.Component {
                    <Button color="primary">Contact Me</Button>
                  </Card>
                </span></ReactTooltip>
-             <ReactTooltip id='healthgrades' type="light" delayHide={1000}><span>
+             <ReactTooltip id='healthgrades' type="light" delayHide={500}><span>
                <Card block className="text-center">
                    <img className="profile-photo" src={require("../../images/adam.jpg")}/>
                      <a href="https://www.linkedin.com/in/poulsenadam" className="name">Adam Poulson</a>
@@ -58,7 +58,7 @@ class AlumniCompanies extends React.Component {
                  <Button color="primary">Contact Me</Button>
                </Card>
             </span></ReactTooltip>
-          <ReactTooltip id='opentable' type="light" delayHide={1000}><span>
+          <ReactTooltip id='opentable' type="light" delayHide={500}><span>
               <Card block className="text-center">
                   <img className="profile-photo" src={require("../../images/jorie.jpg")}/>
                     <a href="https://www.linkedin.com/in/jorieclark" className="name">Jorie Clark</a>
@@ -66,7 +66,7 @@ class AlumniCompanies extends React.Component {
                 <Button color="primary">Contact Me</Button>
               </Card>
            </span></ReactTooltip>
-         <ReactTooltip id='nationstar' type="light" delayHide={1000}><span>
+         <ReactTooltip id='nationstar' type="light" delayHide={500}><span>
                <Card block className="text-center">
                    <img className="profile-photo" src={require("../../images/josh.jpg")}/>
                      <a href="https://www.linkedin.com/in/joshuataylorbw" className="name">Josh Sparks</a>
@@ -74,7 +74,7 @@ class AlumniCompanies extends React.Component {
                  <Button color="primary">Contact Me</Button>
                </Card>
             </span></ReactTooltip>
-          <ReactTooltip id='amazon' type="light" delayHide={1000}><span>
+          <ReactTooltip id='amazon' type="light" delayHide={500}><span>
                   <Card block className="text-center">
                       <img className="profile-photo" src={require("../../images/dan.jpg")}/>
                         <a href="https://www.linkedin.com/in/danielpabbott" className="name">Daniel Abbot</a>
@@ -82,7 +82,7 @@ class AlumniCompanies extends React.Component {
                     <Button color="primary">Contact Me</Button>
                   </Card>
                </span></ReactTooltip>
-             <ReactTooltip id='dish' type="light" delayHide={1000} data-effect="solid" data-html="true"><span>
+             <ReactTooltip id='dish' type="light" delayHide={500} data-effect="solid" data-html="true"><span>
                    <Card block className="text-center">
                        <img className="profile-photo" src={require("../../images/ji.jpg")}/>
                          <a href="https://www.linkedin.com/in/jkim55" className="name">Ji Kim</a>
