@@ -250,6 +250,12 @@
   color: black;
 }
 
+.alumni-card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media (max-width: 975px) {
   .curriculum-section {
     padding:1rem;
