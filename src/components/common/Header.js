@@ -37,7 +37,7 @@ render() {
              <NavLink href="#studentlife">Student Life</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="#alumni">Graduates</NavLink>
+             <NavLink href="#graduates">Graduates</NavLink>
            </NavItem>
            <NavItem>
              <NavLink>Dates</NavLink>

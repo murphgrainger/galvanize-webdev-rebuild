@@ -56,7 +56,7 @@ renderItems() {
         return (
           <div>
             <div className='section-headline'>
-              <h2 className='headline'>Recent Alumni</h2>
+              <h2 className='headline'>Recent Graduates</h2>
             </div>
             <div className="alumni-card-holder">
             {this.renderItems()}
