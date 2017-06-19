@@ -4,6 +4,7 @@ import { Col, Row, Button } from 'reactstrap';
 
 import './student-life.css'
 import ParallaxHeader from './../parallax/ParallaxHeader'
+import Goals from './../goals/Goals'
 import Timeline from './../timeline/Timeline'
 import Curriculum from './../curriculum/Curriculum'
 
@@ -16,6 +17,7 @@ class StudentLife extends React.Component {
             <div className="student-life-container">
               <ParallaxHeader title="Student Life" background={studentLifeImage}/>
             </div>
+            <Goals />
             <div className='section-headline'>
               <h2 className='headline'>Daily Plan</h2>
             </div>

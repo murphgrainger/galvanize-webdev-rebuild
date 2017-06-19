@@ -6,10 +6,6 @@ import './alumni.css'
 
 class Alumni extends React.Component {
 
-  componentDidMount() {
-    console.log('props', this.props.item);
-  }
-
     render() {
         return (
             <Col className="card-col" xs="12" sm="6" md="6" lg="3">

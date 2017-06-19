@@ -2,14 +2,17 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button } from 'reactstrap';
 
+import './goals.css'
+
+import GoalCard from './GoalCard';
+
+
 import { createClient } from 'contentful'
 import { deliveryAccessToken, graduateTypeId, spaceId } from '../../config'
 
-import AlumniCard from './AlumniCard';
 
-import './alumni.css'
+class Goals extends React.Component {
 
-class Alumni extends React.Component {
   constructor(props) {
   super(props);
   this.state = {
@@ -28,22 +31,29 @@ initClient (spaceId, deliveryAccessToken) {
     host: 'cdn.contentful.com'
   })
   return client.getEntries({
-    content_type: 'graduate'
+    content_type: 'goal',
+    order: 'sys.createdAt'
+
   })
     .then((res) => {
+      console.log(res);
       authorized = true
       this.setState({ items: [...this.state.items, ...res.items] });
+      console.log(res.items);
       return res.items
     })
+    .catch(err => {console.log(err)})
 }
 
 componentWillMount() {
+  console.log('hello!');
   this.initClient(spaceId, deliveryAccessToken)
 }
 
 renderItems() {
+  console.log(this.state.items);
   return this.state.items.map(item => (
-    <AlumniCard
+    <GoalCard
       key={item.sys.id}
       item={item.fields}
       {...this.props}
@@ -53,16 +63,11 @@ renderItems() {
 
     render() {
         return (
-          <div>
-            <div className='section-headline'>
-              <h2 className='headline'>Recent Graduates</h2>
-            </div>
-            <div className="alumni-card-holder">
+          <div className="goal-holder">
             {this.renderItems()}
           </div>
-        </div>
         );
     }
 }
 
-export default Alumni;
+export default Goals;

@@ -35,7 +35,7 @@ class Curriculum extends React.Component {
                     <Col xs='12' sm='12' md='9' className="curriculum-content">
                       <h4 className="label">Module 2</h4>
                       <h3 className="title">Server-Side Programming</h3>
-                      <p>Learn how to build and deploy dynamic server-side web apps using Node.js and Express as well as how to manageL. You&#39;ll finish this module by completing a server-side application using an agile workflow
+                      <p>Learn how to build and deploy dynamic server-side web apps using Node.js and Express as well as how to manage databases using SQL. You&#39;ll finish this module by completing a server-side application using an agile workflow
                         with a team of classmates.
                       </p>
                       <img className="tech-logo" src={require("../../images/node.png")}/>
