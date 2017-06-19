@@ -1,3 +1,8 @@
+.timeline-col {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .timeline-outer {
   width: 100%;
   display: flex;
@@ -6,6 +11,7 @@
   align-items: center;
   text-align: center;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .schedule {

@@ -1,6 +1,7 @@
 .goal-holder {
   display: flex;
   flex-flow: row wrap;
+  padding: 1rem 3rem;
 }
 
 .goal-block {
@@ -22,4 +23,8 @@
 .media-object {
   padding-left: .5rem;
   padding-right: .5rem;
+}
+
+.media-body {
+  padding: 0rem 1rem;
 }
