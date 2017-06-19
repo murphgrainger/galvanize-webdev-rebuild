@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Col, Row, Button } from 'reactstrap';
+import { Col, Row, Button, Card, Media } from 'reactstrap';
 
 import './goals.css'
 
@@ -8,14 +8,21 @@ import './goals.css'
 class GoalCard extends React.Component {
 
   componentDidMount() {
-    console.log('props', this.props.item);
+    console.log('props', this.props.item.icon.fields.file.url);
   }
 
     render() {
         return (
           <Col sm="12" md="6" className="goal-block">
-              <h4 className="label">{this.props.item.goal}</h4>
-              <p>{this.props.item.description}</p>
+            <Media>
+            <Media left>
+              <Media object src={this.props.item.icon.fields.file.url} className="goal-icon" />
+            </Media>
+            <Media body>
+              <Media heading> {this.props.item.goal}</Media>
+                {this.props.item.description}
+                </Media>
+              </Media>
             </Col>
         );
     }
