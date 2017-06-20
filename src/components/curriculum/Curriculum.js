@@ -31,7 +31,6 @@ class Curriculum extends Component {
     })
     return client.getEntries({
       content_type: 'curriculum',
-      'sys.id[ne]': "3rDHTYadosu2MScOkoqsco",
       order: 'sys.createdAt'
 
     })

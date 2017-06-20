@@ -5,7 +5,7 @@ import { Col, Row, Button, Card } from 'reactstrap';
 import './curriculum.css'
 
 import TechIcon from './TechIcon';
-
+import CapstoneCard from './CapstoneCard';
 
 
 class CurriculumCard extends React.Component {
@@ -25,6 +25,8 @@ class CurriculumCard extends React.Component {
   }
 
     render() {
+
+      if (this.props.item.hasOwnProperty('module')) {
         return (
           <Col sm="12" md="6" className="curriculum-block">
             <Card className="curriculum-card">
@@ -38,6 +40,12 @@ class CurriculumCard extends React.Component {
             </Card>
             </Col>
         );
+      } else {
+        return (
+          <CapstoneCard item={this.props} />
+        )
+      }
+
     }
 }
 

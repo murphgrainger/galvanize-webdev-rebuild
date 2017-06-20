@@ -72,6 +72,19 @@
   font-weight: 300;
 }
 
+.capstone-card {
+  margin-top: 2rem;
+  background-color: #0095a3;
+}
+
+.capstone-card .title {
+  color: white;
+}
+
+.capstone-card .description {
+  color: white;
+}
+
 @media (max-width: 975px) {
   .curriculum-section {
     padding:1rem;
