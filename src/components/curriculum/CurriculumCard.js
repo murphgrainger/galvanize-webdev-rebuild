@@ -29,9 +29,9 @@ class CurriculumCard extends React.Component {
           <Col sm="12" md="6" className="curriculum-block">
             <Card className="curriculum-card">
               <img src={this.props.item.icon.fields.file.url} className="curriculum-icon" />
-              <h5>Module {this.props.item.module}</h5>
-              <h3>{this.props.item.title}</h3>
-              <p>{this.props.item.description}</p>
+              <h4 className="label">Module {this.props.item.module}</h4>
+              <h3 className="title">{this.props.item.title}</h3>
+              <p className="description">{this.props.item.description}</p>
               <div className="tech-logos">
               {this.renderItems()}
               </div>
