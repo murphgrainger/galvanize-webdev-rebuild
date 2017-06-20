@@ -7,10 +7,6 @@ import './goals.css'
 
 class GoalCard extends React.Component {
 
-  componentDidMount() {
-    console.log('props', this.props.item.icon.fields.file.url);
-  }
-
     render() {
         return (
           <Col sm="12" md="6" className="goal-block">

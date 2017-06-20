@@ -6,12 +6,6 @@ import './parallax.css'
 
 class ParallaxHeader extends React.Component {
 
-  componentDidMount(){
-    console.log(this.props.background);
-
-
-
-  }
     render() {
         return (
           <div>

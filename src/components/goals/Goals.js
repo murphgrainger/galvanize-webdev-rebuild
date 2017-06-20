@@ -36,22 +36,18 @@ initClient (spaceId, deliveryAccessToken) {
 
   })
     .then((res) => {
-      console.log(res);
       authorized = true
       this.setState({ items: [...this.state.items, ...res.items] });
-      console.log(res.items);
       return res.items
     })
     .catch(err => {console.log(err)})
 }
 
 componentWillMount() {
-  console.log('hello!');
   this.initClient(spaceId, deliveryAccessToken)
 }
 
 renderItems() {
-  console.log(this.state.items);
   return this.state.items.map(item => (
     <GoalCard
       key={item.sys.id}

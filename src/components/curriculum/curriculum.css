@@ -2,19 +2,48 @@
   padding: 3rem;
 }
 
-
-.curriculum-block-container {
+.module-holder {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
-.icon-col {
-  text-align: center;
-  vertical-align:bottom;
+.curriculum-block {
+  padding: 0;
 }
+
+.curriculum-card {
+  padding: 1rem 1.5rem;
+
+}
+
+.curriculum-card h5{
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: .75rem;
+}
+
 .curriculum-icon {
-  width: 200px;
+  width: 150px;
+}
+
+.tech-logos {
+  display: none;
+}
+
+.tech-logo {
+  height: 50px;
+  margin: 3px;
+}
+
+.curriculum-card:hover {
+  z-index: 1;
+}
+
+.curriculum-card:hover .tech-logos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .label {
@@ -38,12 +67,6 @@
   font-size: 1rem;
   font-weight: 300;
 }
-
-.tech-logo {
-  height: 50px;
-  margin: .75rem;
-}
-
 
 @media (max-width: 975px) {
   .curriculum-section {
