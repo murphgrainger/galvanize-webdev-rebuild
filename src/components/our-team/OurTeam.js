@@ -11,13 +11,7 @@ const ourTeamImage = require(`../../images/photo-grid.jpg`)
 class OurTeam extends React.Component {
     render() {
         return (
-          <div className='section'>
-            <div className='section-headline'>
-              <h2 className='headline'>The Galvanize Advantage</h2>
-                <Col sm='12' className="lead-text-column">
-                  <p className="lead">Galvanize campuses are designed from the ground up to be conducive to learning to code. From the classrooms and the lab space to the carefully vetted companies renting workspaces: <br></br><span>Galvanize is the learning community for technology.</span></p>
-                </Col>
-            </div>
+          <div className='section'>    
             <ParallaxHeader title="Our Team" background={ourTeamImage}/>
             <Row className="card-row">
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">

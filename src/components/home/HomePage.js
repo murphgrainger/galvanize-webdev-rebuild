@@ -31,11 +31,20 @@ class HomePage extends React.Component {
             </div>
             <Stats/>
             <Callout />
+            <div className='section'>
+              <div className='section-headline'>
+                <h2 className='headline'>The Galvanize Advantage</h2>
+                  <Col sm='12' className="lead-text-column">
+                    <p className="lead">Galvanize campuses are designed from the ground up to be conducive to learning to code. From the classrooms and the lab space to the carefully vetted companies renting workspaces: <br></br><span>Galvanize is the learning community for technology.</span></p>
+                  </Col>
+              </div>
+              </div>
+              
+              <ScrollableAnchor key="studentlife" id="studentlife" >
+                <StudentLife />
+              </ScrollableAnchor>
             <ScrollableAnchor key="ourteam" id="ourteam" >
                 <OurTeam />
-            </ScrollableAnchor>
-            <ScrollableAnchor key="studentlife" id="studentlife" >
-              <StudentLife />
             </ScrollableAnchor>
             <ScrollableAnchor key="graduates" id="graduates" >
               <Alumni />
