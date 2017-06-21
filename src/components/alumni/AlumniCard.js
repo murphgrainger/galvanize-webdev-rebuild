@@ -8,7 +8,7 @@ class Alumni extends React.Component {
 
     render() {
         return (
-          <Col sm="12" md="12" lg='6' className="goal-block">
+          <Col xs="12" sm="12" md="12" lg='6' className="goal-block">
                 <Card className="alumni-card">
                   <div className="image-holder">
                     <img src={this.props.item.photo.fields.file.url}/>
