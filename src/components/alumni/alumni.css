@@ -214,11 +214,6 @@
   height: 100%;
   padding: 0;
 }
-
-.alumni-body {
-  padding: 1rem;
-}
-
 .alummi-info {
   display: flex;
   flex-direction: row;
@@ -242,6 +237,45 @@
 
 .story {
   margin-top: 1rem;
+  color: #bfbfbf;
+  font-weight: 300;
+}
+
+.image-holder {
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+  position: relative;
+}
+
+.alumni-body {
+  width: 80%;
+  padding: 1rem;
+}
+
+.alumni-body .title {
+  color: #EA882C;
+}
+
+.image-holder img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+ top: -9999px;
+ bottom: -9999px;
+ left: -9999px;
+ right: -9999px;
+ margin: auto;
+ text-align: left;
+}
+
+.alumni-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #353535;
+  color: white;
 }
 
 @media (max-width: 975px) {
