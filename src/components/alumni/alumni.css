@@ -210,6 +210,29 @@
   justify-content: center;
 }
 
+.alumni-photo {
+  height: 100%;
+  padding: 0;
+}
+
+.alumni-body {
+  padding: 1rem;
+}
+
+.alummi-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.alumni-footer {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-me-button {
+  margin-left: 1rem;
+}
+
 @media (max-width: 975px) {
   .curriculum-section {
     padding:1rem;

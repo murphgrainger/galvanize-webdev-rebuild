@@ -28,7 +28,9 @@ initClient (spaceId, deliveryAccessToken) {
     host: 'cdn.contentful.com'
   })
   return client.getEntries({
-    content_type: 'graduate'
+    content_type: 'graduate',
+    limit: 2
+
   })
     .then((res) => {
       authorized = true
@@ -55,7 +57,7 @@ renderItems() {
         return (
           <div>
             <div className='section-headline'>
-              <h2 className='headline'>Recent Graduates</h2>
+              <h2 className='headline'>Recent Graduate Spotlight</h2>
             </div>
             <div className="alumni-card-holder">
             {this.renderItems()}
