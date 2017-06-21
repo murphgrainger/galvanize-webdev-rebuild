@@ -233,8 +233,36 @@
   margin-left: 1rem;
 }
 
+.subtitle {
+  font-weight: 300;
+  color: #828282;
+  font-size: .833rem;
+  margin-bottom: 0;
+}
+
+.story {
+  margin-top: 1rem;
+}
+
 @media (max-width: 975px) {
   .curriculum-section {
     padding:1rem;
+  }
+}
+
+@media (max-width: 816px) {
+  .story {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

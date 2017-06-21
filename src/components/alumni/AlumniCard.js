@@ -16,7 +16,8 @@ class Alumni extends React.Component {
               </Media>
               <Media body className="alumni-body">
                 <Media heading> {this.props.item.name}</Media>
-                  <p className="title-location">{this.props.item.currentCompany} | Denver, CO</p>
+                  <p className="subtitle">{this.props.item.currentCompany} | Denver, CO</p>
+                  <p className="subtitle">{this.props.item.cohort}</p>
                   <p className="story">{this.props.item.story}</p>
                   </Media>
                 </Media>

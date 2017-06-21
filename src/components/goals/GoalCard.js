@@ -9,7 +9,7 @@ class GoalCard extends React.Component {
 
     render() {
         return (
-          <Col sm="12" md="6" className="goal-block">
+          <Col xs="12" sm="12" md="6" lg="6" className="goal-block">
             <Media>
             <Media left>
               <Media object src={this.props.item.icon.fields.file.url} className="goal-icon" />
