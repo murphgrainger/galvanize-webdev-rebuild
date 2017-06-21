@@ -18,3 +18,12 @@
   font-weight: 300!important;
   padding-right: 1rem!important;
 }
+
+@media (max-width: 710px) {
+  .navbar-nav {
+    display: none!important;
+  }
+  .navbar-toggler {
+    display: block!important;
+  }
+}
