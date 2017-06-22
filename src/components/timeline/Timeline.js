@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button, Card } from 'reactstrap';
 
+import { createClient } from 'contentful'
+import { deliveryAccessToken, graduateTypeId, spaceId } from '../../config'
+
 import './timeline.css'
 
 const curriculumContent = {
@@ -37,162 +40,48 @@ class Timeline extends React.Component {
     super(props);
 
     this.state = {
-      curriculumText: curriculumContent.standard
+      curriculumText: curriculumContent.standard,
+      items: []
     };
 
     this.hoverText = this.hoverText.bind(this);
-
+    this.initClient = this.initClient.bind(this);
   }
 
-  hoverText(text) {
-      this.setState({
-        curriculumText: curriculumContent[text]
+  initClient (spaceId, deliveryAccessToken) {
+    let client
+    let authorized
+    client = createClient({
+      space: spaceId,
+      accessToken: deliveryAccessToken,
+      host: 'cdn.contentful.com'
+    })
+    return client.getEntries({
+      content_type: 'schedule',
+    })
+      .then((res) => {
+        authorized = true
+        this.setState({ items: [...this.state.items, ...res.items] });
+        return res.items
       })
+      .catch(err => {console.log(err)})
+  }
 
-      switch (text) {
-        case 'standard':
-          horizStyle = {
-            display: 'none',
-            borderLeft: '2px solid #353535',
-            marginLeft: '2.5%'
-          }
-          vertStyle = {
-            display: 'none',
-            borderTop: '2px solid #353535',
-            marginLeft: '2.5%'
-          }
-          break;
-      case 'standup':
-        horizStyle = {
-          display: 'block',
-          borderLeft: '2px solid #353535',
-        }
-        vertStyle = {
-          display: 'block',
-          borderTop: '2px solid #353535',
-        }
-
-        lineStyle = {
-          marginLeft: '3%'
-        }
-        break;
-      case 'warmup':
-        horizStyle = {
-          display: 'block',
-          borderLeft: '2px solid #cecece',
-        }
-        vertStyle = {
-          display: 'block',
-          borderTop: '2px solid #cecece',
-          width: '73%'
-        }
-
-        lineStyle = {
-          marginLeft: '10%'
-        }
-        break;
-      case 'lecture':
-        horizStyle = {
-          display: 'block',
-          borderLeft: '2px solid #0095a3',
-        }
-        vertStyle = {
-          display: 'block',
-          borderTop: '2px solid #0095a3',
-          width: '65%'
-        }
-
-        lineStyle = {
-          marginLeft: '18%'
-        }
-        break;
-    case 'lunch':
-      horizStyle = {
-        display: 'block',
-        borderLeft: '2px solid #353535',
-        marginLeft: '31%'
-      }
-      vertStyle = {
-        display: 'block',
-        borderTop: '2px solid #353535',
-        width: '65%'
-      }
-
-      lineStyle = {
-        marginLeft: '18%',
-      }
-      break;
-  case 'lightening_talks':
-    horizStyle = {
-      display: 'block',
-      borderLeft: '2px solid #cecece',
-      marginLeft: '41%'
-    }
-    vertStyle = {
-      display: 'block',
-      borderTop: '2px solid #cecece',
-      width: '65%'
-    }
-
-    lineStyle = {
-      marginLeft: '18%',
-    }
-    break;
-  case 'personalized_learning':
-    horizStyle = {
-      display: 'block',
-      borderLeft: '2px solid #0095a3',
-    }
-    vertStyle = {
-      display: 'block',
-      borderTop: '2px solid #0095a3',
-      width: '65%'
-    }
-
-    lineStyle = {
-      display:'flex',
-      flexDirection:'row-reverse',
-      justifyContent: 'flex-end',
-      alignItems: 'flex-end',
-      marginLeft: '18%'
-    }
-    break;
-  case 'standdown':
-    horizStyle = {
-      display: 'block',
-      borderLeft: '2px solid #353535',
-    }
-    vertStyle = {
-      display: 'block',
-      borderTop: '2px solid #353535',
-      width: '78%'
-    }
-
-    lineStyle = {
-      display:'flex',
-      flexDirection:'row-reverse',
-      justifyContent: 'flex-end',
-      alignItems: 'flex-end',
-      marginLeft: '18%'
-
-    }
-    break;
-
-        default:
-    }
+  componentWillMount() {
+    this.initClient(spaceId, deliveryAccessToken)
   }
 
     render() {
         return (
           <div>
           <div className="timeline-outer">
-              <div className="schedule standup" onMouseEnter={() => this.hoverText('standup')} onMouseLeave={() => this.hoverText('standard')}>Stand Up</div>
-              <div className="schedule warmup" onMouseEnter={() => this.hoverText('warmup')} onMouseLeave={() => this.hoverText('standard')}>Warmup</div>
-              <div className="schedule lectures" onMouseEnter={() => this.hoverText('lecture')} onMouseLeave={() => this.hoverText('standard')}>Lectures</div>
-              <div className="schedule lunch" onMouseEnter={() => this.hoverText('lunch')} onMouseLeave={() => this.hoverText('standard')}>Lunch</div>
-              <div className="schedule lightening" onMouseEnter={() => this.hoverText('lightening_talks')} onMouseLeave={() => this.hoverText('standard')}>Lightening Talks</div>
-              <div className="schedule personalized" onMouseEnter={() => this.hoverText('personalized_learning')} onMouseLeave={() => this.hoverText('standard')}>Personalized Learning</div>
-              <div className="schedule standdown" onMouseEnter={() => this.hoverText('standdown')} onMouseLeave={() => this.hoverText('standard')}>Stand Down</div>
+              <div className="schedule standup" onMouseEnter={() => this.hoverText('Stand Up')} onMouseLeave={() => this.hoverText('Standard')}>Stand Up</div>
+              <div className="schedule warmup" onMouseEnter={() => this.hoverText('Warmup')} onMouseLeave={() => this.hoverText('Standard')}>Warmup</div>
+              <div className="schedule lectures" onMouseEnter={() => this.hoverText('Lecture')} onMouseLeave={() => this.hoverText('Standard')}>Lectures</div>
+              <div className="schedule lunch" onMouseEnter={() => this.hoverText('Lunch')} onMouseLeave={() => this.hoverText('Standard')}>Lunch</div>
+              <div className="schedule lightening" onMouseEnter={() => this.hoverText('Lightening Talks')} onMouseLeave={() => this.hoverText('Standard')}>Lightening Talks</div>
+              <div className="schedule personalized" onMouseEnter={() => this.hoverText('Personalized Learning')} onMouseLeave={() => this.hoverText('Standard')}>Personalized Learning</div>
+              <div className="schedule standdown" onMouseEnter={() => this.hoverText('Stand Down')} onMouseLeave={() => this.hoverText('Standard')}>Stand Down</div>
           </div>
           <div className="lines" style={lineStyle}>
             <div className="vertical-line" style={horizStyle} ></div>
@@ -203,6 +92,148 @@ class Timeline extends React.Component {
           </Col>
           </div>
         );
+    }
+
+    hoverText(text) {
+      let schedule = this.state.items.filter(item => {
+      return item.fields.title === text
+      })
+        this.setState({
+          curriculumText: schedule[0].fields.description
+        })
+
+        switch (text) {
+          case 'Standard':
+            horizStyle = {
+              display: 'none',
+              borderLeft: '2px solid #353535',
+              marginLeft: '2.5%'
+            }
+            vertStyle = {
+              display: 'none',
+              borderTop: '2px solid #353535',
+              marginLeft: '2.5%'
+            }
+            break;
+        case 'Stand Up':
+          horizStyle = {
+            display: 'block',
+            borderLeft: '2px solid #353535',
+            transition: 'opacity 2s ease-in'
+          }
+          vertStyle = {
+            display: 'block',
+            borderTop: '2px solid #353535',
+          }
+
+          lineStyle = {
+            marginLeft: '3%'
+          }
+          break;
+        case 'Warmup':
+          horizStyle = {
+            display: 'block',
+            borderLeft: '2px solid #cecece',
+          }
+          vertStyle = {
+            display: 'block',
+            borderTop: '2px solid #cecece',
+            width: '73%'
+          }
+
+          lineStyle = {
+            marginLeft: '10%'
+          }
+          break;
+        case 'Lecture':
+          horizStyle = {
+            display: 'block',
+            borderLeft: '2px solid #0095a3',
+          }
+          vertStyle = {
+            display: 'block',
+            borderTop: '2px solid #0095a3',
+            width: '65%'
+          }
+
+          lineStyle = {
+            marginLeft: '18%'
+          }
+          break;
+      case 'Lunch':
+        horizStyle = {
+          display: 'block',
+          borderLeft: '2px solid #353535',
+          marginLeft: '31%'
+        }
+        vertStyle = {
+          display: 'block',
+          borderTop: '2px solid #353535',
+          width: '65%'
+        }
+
+        lineStyle = {
+          marginLeft: '18%',
+        }
+        break;
+    case 'Lightening Talks':
+      horizStyle = {
+        display: 'block',
+        borderLeft: '2px solid #cecece',
+        marginLeft: '41%'
+      }
+      vertStyle = {
+        display: 'block',
+        borderTop: '2px solid #cecece',
+        width: '65%'
+      }
+
+      lineStyle = {
+        marginLeft: '18%',
+      }
+      break;
+    case 'Personalized Learning':
+      horizStyle = {
+        display: 'block',
+        borderLeft: '2px solid #0095a3',
+      }
+      vertStyle = {
+        display: 'block',
+        borderTop: '2px solid #0095a3',
+        width: '65%'
+      }
+
+      lineStyle = {
+        display:'flex',
+        flexDirection:'row-reverse',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        marginLeft: '18%'
+      }
+      break;
+    case 'Stand Down':
+      horizStyle = {
+        display: 'block',
+        borderLeft: '2px solid #353535',
+      }
+      vertStyle = {
+        display: 'block',
+        borderTop: '2px solid #353535',
+        width: '78%'
+      }
+
+      lineStyle = {
+        display:'flex',
+        flexDirection:'row-reverse',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        marginLeft: '18%'
+
+      }
+      break;
+
+          default:
+      }
     }
 }
 
