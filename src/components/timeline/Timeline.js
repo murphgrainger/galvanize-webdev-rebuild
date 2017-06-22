@@ -99,43 +99,43 @@ class Timeline extends React.Component {
         vertStyle = {
           display: 'block',
           borderTop: '2px solid #0095a3',
-          width: '63%'
+          width: '65%'
         }
 
         lineStyle = {
-          marginLeft: '20%'
+          marginLeft: '18%'
         }
         break;
     case 'lunch':
       horizStyle = {
         display: 'block',
         borderLeft: '2px solid #353535',
-        marginLeft: '29%'
+        marginLeft: '31%'
       }
       vertStyle = {
         display: 'block',
         borderTop: '2px solid #353535',
-        width: '63%'
+        width: '65%'
       }
 
       lineStyle = {
-        marginLeft: '20%',
+        marginLeft: '18%',
       }
       break;
   case 'lightening_talks':
     horizStyle = {
       display: 'block',
       borderLeft: '2px solid #cecece',
-      marginLeft: '39%'
+      marginLeft: '41%'
     }
     vertStyle = {
       display: 'block',
       borderTop: '2px solid #cecece',
-      width: '63%'
+      width: '65%'
     }
 
     lineStyle = {
-      marginLeft: '20%',
+      marginLeft: '18%',
     }
     break;
   case 'personalized_learning':
@@ -146,7 +146,7 @@ class Timeline extends React.Component {
     vertStyle = {
       display: 'block',
       borderTop: '2px solid #0095a3',
-      width: '63%'
+      width: '65%'
     }
 
     lineStyle = {
@@ -154,7 +154,7 @@ class Timeline extends React.Component {
       flexDirection:'row-reverse',
       justifyContent: 'flex-end',
       alignItems: 'flex-end',
-      marginLeft: '20%'
+      marginLeft: '18%'
     }
     break;
   case 'standdown':
@@ -165,7 +165,7 @@ class Timeline extends React.Component {
     vertStyle = {
       display: 'block',
       borderTop: '2px solid #353535',
-      width: '76.65%'
+      width: '78%'
     }
 
     lineStyle = {
@@ -173,7 +173,7 @@ class Timeline extends React.Component {
       flexDirection:'row-reverse',
       justifyContent: 'flex-end',
       alignItems: 'flex-end',
-      marginLeft: '40%'
+      marginLeft: '18%'
 
     }
     break;
