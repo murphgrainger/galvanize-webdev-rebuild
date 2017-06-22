@@ -142,7 +142,6 @@ class Timeline extends React.Component {
     horizStyle = {
       display: 'block',
       borderLeft: '2px solid #0095a3',
-      marginLeft: '62.75%'
     }
     vertStyle = {
       display: 'block',
@@ -151,14 +150,17 @@ class Timeline extends React.Component {
     }
 
     lineStyle = {
-      marginLeft: '20%',
+      display:'flex',
+      flexDirection:'row-reverse',
+      justifyContent: 'flex-end',
+      alignItems: 'flex-end',
+      marginLeft: '20%'
     }
     break;
   case 'standdown':
     horizStyle = {
       display: 'block',
       borderLeft: '2px solid #353535',
-      marginLeft: '76.5%'
     }
     vertStyle = {
       display: 'block',
@@ -167,7 +169,12 @@ class Timeline extends React.Component {
     }
 
     lineStyle = {
-      marginLeft: '20%',
+      display:'flex',
+      flexDirection:'row-reverse',
+      justifyContent: 'flex-end',
+      alignItems: 'flex-end',
+      marginLeft: '40%'
+
     }
     break;
 
