@@ -8,7 +8,6 @@ import './curriculum.css'
 class CapstoneCard extends React.Component {
 
   componentDidMount() {
-    console.log('capstone card', this.props.item.item);
   }
 
     render() {

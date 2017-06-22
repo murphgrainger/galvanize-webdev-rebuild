@@ -7,17 +7,6 @@ import { deliveryAccessToken, graduateTypeId, spaceId } from '../../config'
 
 import './timeline.css'
 
-const curriculumContent = {
-  standard: 'Our curriculum is built internally and consistently updated along with the quickly changing tech scene.  While each day is unique, the core of our program is morning lectures, followed by personalized learning time where students work through exercises at their own pace to master content objectives.',
-  standup: 'At the beginning of each class day, the cohort circles into a "standup" to discuss overnight wins, blockers, discoveries, and events coming up.  Breakout topics for later are formed from these discussions.',
-  warmup: 'Warmup ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  lecture: 'Lecture ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  lunch: 'Lunch ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  lightening_talks: 'Lightening ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  personalized_learning: 'Work through exercises from concepts learned that morning. Work in groups, ask for help from an instructor, or choose to power through individually.',
-  standdown: 'A bookend from the morning, standown is a quick close-out of the day where students circle-up to discuss wins, blockers, discoveries, and events.'
-}
-
 let lineStyle = {
   marginLeft: '2.5%'
 }
@@ -40,7 +29,6 @@ class Timeline extends React.Component {
     super(props);
 
     this.state = {
-      curriculumText: curriculumContent.standard,
       items: []
     };
 
@@ -65,10 +53,16 @@ class Timeline extends React.Component {
         return res.items
       })
       .catch(err => {console.log(err)})
+      .then(() => {
+        this.setState({
+          curriculumText: this.state.items[5].fields.description,
+
+        })      })
   }
 
   componentWillMount() {
     this.initClient(spaceId, deliveryAccessToken)
+
   }
 
     render() {

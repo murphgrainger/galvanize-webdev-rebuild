@@ -8,7 +8,6 @@ import './curriculum.css'
 class TechIcon extends React.Component {
 
   componentDidMount() {
-    console.log(this.props.logo);
   }
 
     render() {

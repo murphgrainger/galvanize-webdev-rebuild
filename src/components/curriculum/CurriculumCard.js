@@ -11,7 +11,6 @@ import CapstoneCard from './CapstoneCard';
 class CurriculumCard extends React.Component {
 
   componentDidMount() {
-    console.log('props', this.props.item.techLogo);
   }
 
   renderItems() {
