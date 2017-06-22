@@ -38,13 +38,13 @@ class Timeline extends React.Component {
         return (
           <div>
           <div className="timeline-outer">
-              <div className="schedule standup" onMouseEnter={() => this.hoverText('standup')}>Stand Up</div>
-              <div className="schedule warmup" onMouseEnter={() => this.hoverText('warmup')}>Warmup</div>
-              <div className="schedule lectures" onMouseEnter={() => this.hoverText('lecture')}>Lectures</div>
-              <div className="schedule lunch" onMouseEnter={() => this.hoverText('lunch')}>Lunch</div>
-              <div className="schedule lightening" onMouseEnter={() => this.hoverText('lightening_talks')}>Lightening Talks</div>
-              <div className="schedule personalized" onMouseEnter={() => this.hoverText('personalized_learning')}>Personalized Learning</div>
-              <div className="schedule standdown" onMouseEnter={() => this.hoverText('standdown')}>Stand Down</div>
+              <div className="schedule standup" onMouseEnter={() => this.hoverText('standup')} onMouseLeave={() => this.hoverText('standard')}>Stand Up</div>
+              <div className="schedule warmup" onMouseEnter={() => this.hoverText('warmup')} onMouseLeave={() => this.hoverText('standard')}>Warmup</div>
+              <div className="schedule lectures" onMouseEnter={() => this.hoverText('lecture')} onMouseLeave={() => this.hoverText('standard')}>Lectures</div>
+              <div className="schedule lunch" onMouseEnter={() => this.hoverText('lunch')} onMouseLeave={() => this.hoverText('standard')}>Lunch</div>
+              <div className="schedule lightening" onMouseEnter={() => this.hoverText('lightening_talks')} onMouseLeave={() => this.hoverText('standard')}>Lightening Talks</div>
+              <div className="schedule personalized" onMouseEnter={() => this.hoverText('personalized_learning')} onMouseLeave={() => this.hoverText('standard')}>Personalized Learning</div>
+              <div className="schedule standdown" onMouseEnter={() => this.hoverText('standdown')} onMouseLeave={() => this.hoverText('standard')}>Stand Down</div>
             </div>
             <Col sm='12' className="lead-text-column curriculumn-text">
               <p className="lead">{this.state.curriculumText}</p>
