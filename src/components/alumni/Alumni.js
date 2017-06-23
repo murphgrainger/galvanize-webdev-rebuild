@@ -17,7 +17,7 @@ class Alumni extends React.Component {
     render() {
         return (
           <div>
-            <ParallaxHeader title="Our Graduates" background={alumniImage}/>
+            <ParallaxHeader title="Graduates" background={alumniImage}/>
             <div className="stat-row">
               <Col sm="12" md="4" className="review-block">
                 <h4 className="label">Number of Graduates</h4>
