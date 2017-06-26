@@ -11,7 +11,7 @@ const ourTeamImage = require(`../../images/photo-grid.jpg`)
 class OurTeam extends React.Component {
     render() {
         return (
-          <div className='section'>    
+          <div>    
             <ParallaxHeader title="Our Team" background={ourTeamImage}/>
             <Row className="card-row">
               <Col className="card-col" xs="12" sm="6" md="6" lg="3">
