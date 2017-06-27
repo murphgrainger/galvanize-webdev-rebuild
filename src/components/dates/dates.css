@@ -1,7 +1,7 @@
 .date-row {
   display: flex;
   flex-wrap: wrap;
-  padding: 4rem;
+  padding: 1rem 4rem;
 }
 
 .date-card {
@@ -34,6 +34,18 @@
 
 .day {
   font-weight: 700;
+}
+
+.campus-col {
+  min-height: 100%;
+}
+
+.campus-block {
+  height: 100%;
+}
+
+.campus-block .campus {
+  height: 46%;
 }
 
 .campus-block img {

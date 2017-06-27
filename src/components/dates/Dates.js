@@ -64,7 +64,7 @@ renderItems() {
           <div>
             <ParallaxHeader title="Apply" background={applyImage}/>
           <div className="date-row">
-            <Col sm='12' md='5' lg="4">
+            <Col sm='12' md='5' lg="4" className="campus-col">
               <h4 className="label">Visit The Campus</h4>
               <div className="campus-block">
                 <div className="campus platte">
