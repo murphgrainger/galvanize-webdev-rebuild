@@ -8,6 +8,8 @@ import StudentLife from '../student-life/StudentLife';
 import Stats from '../stats/Stats';
 import Callout from '../callout/Callout';
 import Alumni from '../alumni/Alumni';
+import Dates from '../dates/Dates';
+
 
 import './home.css'
 
@@ -39,12 +41,15 @@ class HomePage extends React.Component {
                   </Col>
               </div>
               </div>
-              
+
               <ScrollableAnchor key="studentlife" id="studentlife" >
                 <StudentLife />
               </ScrollableAnchor>
             <ScrollableAnchor key="ourteam" id="ourteam" >
                 <OurTeam />
+            </ScrollableAnchor>
+            <ScrollableAnchor key="graduates" id="graduates" >
+              <Dates />
             </ScrollableAnchor>
             <ScrollableAnchor key="graduates" id="graduates" >
               <Alumni />

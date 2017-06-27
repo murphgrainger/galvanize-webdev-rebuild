@@ -1,0 +1,37 @@
+.date-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem;
+}
+
+.date-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  height: auto;
+  padding: 1rem 2rem;
+  color: #4A4A4A;
+}
+
+.date-card h1 {
+  font-size: 2.986rem;
+  line-height: 1.2;
+  margin: 1.2rem 0;
+  font-weight: 300;
+}
+
+.date-info {
+  margin: .5rem 0rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #828282;
+}
+
+.campus {
+  color: #0095a3;
+}
+
+.day {
+  font-weight: 700;
+}
