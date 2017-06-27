@@ -48,7 +48,7 @@ class HomePage extends React.Component {
             <ScrollableAnchor key="ourteam" id="ourteam" >
                 <OurTeam />
             </ScrollableAnchor>
-            <ScrollableAnchor key="dates" id="dates" >
+            <ScrollableAnchor key="apply" id="apply" >
               <Dates />
             </ScrollableAnchor>
             <ScrollableAnchor key="graduates" id="graduates" >
