@@ -73,7 +73,7 @@ class Timeline extends React.Component {
               <div className="schedule warmup" onMouseEnter={() => this.hoverText('Warmup')} onMouseLeave={() => this.hoverText('Standard')}>Warmup</div>
               <div className="schedule lectures" onMouseEnter={() => this.hoverText('Lecture')} onMouseLeave={() => this.hoverText('Standard')}>Lectures</div>
               <div className="schedule lunch" onMouseEnter={() => this.hoverText('Lunch')} onMouseLeave={() => this.hoverText('Standard')}>Lunch</div>
-              <div className="schedule lightening" onMouseEnter={() => this.hoverText('Lightening Talks')} onMouseLeave={() => this.hoverText('Standard')}>Lightening Talks</div>
+              <div className="schedule lightening" onMouseEnter={() => this.hoverText('Lightening Talks')} onMouseLeave={() => this.hoverText('Standard')}>Lightning Talks</div>
               <div className="schedule personalized" onMouseEnter={() => this.hoverText('Personalized Learning')} onMouseLeave={() => this.hoverText('Standard')}>Personalized Learning</div>
               <div className="schedule standdown" onMouseEnter={() => this.hoverText('Stand Down')} onMouseLeave={() => this.hoverText('Standard')}>Stand Down</div>
           </div>
