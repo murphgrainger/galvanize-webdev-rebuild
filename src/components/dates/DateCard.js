@@ -7,10 +7,6 @@ import './dates.css'
 
 class GoalCard extends React.Component {
 
-  componentWillMount() {
-    console.log(this.props.item);
-  }
-
     render() {
         return (
           <Card className="date-card">
