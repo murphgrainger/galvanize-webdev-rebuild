@@ -5,11 +5,13 @@ import { Col, Row, Button } from 'reactstrap';
 import './dates.css'
 
 import DateCard from './DateCard';
+import ParallaxHeader from '../parallax/ParallaxHeader';
 
 
 import { createClient } from 'contentful'
 import { deliveryAccessToken, graduateTypeId, spaceId } from '../../config'
 
+const applyImage = require(`../../images/mac.jpg`)
 
 class Dates extends React.Component {
 
@@ -59,6 +61,8 @@ renderItems() {
 
     render() {
         return (
+          <div>
+            <ParallaxHeader title="Apply" background={applyImage}/>
           <div className="date-row">
             <Col sm='12' md='5' lg="4">
               <h4 className="label">Visit The Campus</h4>
@@ -81,6 +85,7 @@ renderItems() {
               <h4 className="label">Upcoming Dates</h4>
               {this.renderItems()}
             </Col>
+          </div>
           </div>
         );
     }
