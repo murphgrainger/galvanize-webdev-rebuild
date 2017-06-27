@@ -28,10 +28,57 @@
   color: #828282;
 }
 
-.campus {
+.campus-name {
   color: #0095a3;
 }
 
 .day {
   font-weight: 700;
+}
+
+.campus-block img {
+  width: 100%;
+}
+
+.campus {
+  height: 18em;
+  padding: calc(1rem*1.5);
+  color: white;
+}
+
+.campus h3 {
+  font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2.074rem;
+}
+
+.campus h4 {
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.platte {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65) 30%, rgba(0, 0, 0, .25) 65%, rgba(0, 0, 0, 0.25)), url('//images.contentful.com/hu62i9v1xxtm/1m5rIhEFxO62GsIaYYAk44/7544aaa62c59269183a1645602ddbbb2/platte-interior-stairs-800x500.jpg');
+  background-size: cover;
+  background-position: right;
+}
+
+.platte:hover {
+  background-image: linear-gradient(to right, rgba(0,116,127, 0.7)), url('//images.contentful.com/hu62i9v1xxtm/1m5rIhEFxO62GsIaYYAk44/7544aaa62c59269183a1645602ddbbb2/platte-interior-stairs-800x500.jpg');
+}
+
+.golden {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65) 30%, rgba(0, 0, 0, .25) 65%, rgba(0, 0, 0, 0.25)), url("//images.contentful.com/hu62i9v1xxtm/2oezSIamRWIWkgq2y4gE6W/bd35e09f28cec36b4918c5a8a7fed3db/gt-members-800x500.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.golden:hover {
+  background-image: linear-gradient(to right, rgba(0,116,127, 0.7)), url("//images.contentful.com/hu62i9v1xxtm/2oezSIamRWIWkgq2y4gE6W/bd35e09f28cec36b4918c5a8a7fed3db/gt-members-800x500.jpg");
+}
+
+.info-button {
+  margin-top: 2rem;
 }
