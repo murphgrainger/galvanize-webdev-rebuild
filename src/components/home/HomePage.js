@@ -21,6 +21,7 @@ class HomePage extends React.Component {
     render() {
         return (
           <div>
+            <ScrollableAnchor key="pagetop" id="pagetop" >
             <div className='hero-section'>
               <Col sm='9' md='6' className="grid-cell">
                 <div className='page-title'>
@@ -31,6 +32,7 @@ class HomePage extends React.Component {
               <p><Button color="primary">Start Your Application</Button></p>
               </Col>
             </div>
+          </ScrollableAnchor>
             <Stats/>
             <Callout />
             <div className='section'>
