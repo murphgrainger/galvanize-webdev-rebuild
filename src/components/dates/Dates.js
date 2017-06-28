@@ -75,7 +75,7 @@ renderItems() {
                 </div>
                 <div className="campus golden">
                   <h3>Golden Triangle</h3>
-                  <h4 className="campus-address">1062 Delaware St</h4>
+                  <h4 className="campus-address">1062 Delaware Street</h4>
                   <h4 className="campus-address">Denver, CO 80204</h4>
                   <Button className="info-button">Register for Info Session</Button>
                 </div>
