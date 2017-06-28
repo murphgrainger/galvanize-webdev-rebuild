@@ -15,9 +15,18 @@ import Header from './components/common/Header';
 import Home from './components/home/HomePage';
 import OurTeam from './components/our-team/OurTeam';
 
+var ReactGA = require('react-ga');
+ReactGA.initialize('UA-100879860-2');
+
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname + window.location.search });
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
 
 ReactDOM.render(
-  <Router>
+  <Router
+    onUpdate={logPageView}>
     <div>
       <Header />
       <Home />
