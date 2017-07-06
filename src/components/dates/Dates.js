@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button } from 'reactstrap';
+import ReactGA from 'react-ga';
 
 import './dates.css'
 
@@ -59,6 +60,14 @@ renderItems() {
   ));
 }
 
+gaEvent(label) {
+  ReactGA.event({
+    category: 'Info Session',
+    action: ' Click',
+    label: label
+  })
+}
+
     render() {
         return (
           <div>
@@ -71,13 +80,13 @@ renderItems() {
                   <h3>Platte</h3>
                   <h4 className="campus-address">1644 Platte Street</h4>
                   <h4 className="campus-address">Denver, CO 80202</h4>
-                  <Button className="info-button">Register for Info Session</Button>
+                  <Button className="info-button" onClick={(e) => {this.gaEvent('Info Session Button')}}>Register for Info Session</Button>
                 </div>
                 <div className="campus golden">
                   <h3>Golden Triangle</h3>
                   <h4 className="campus-address">1062 Delaware Street</h4>
                   <h4 className="campus-address">Denver, CO 80204</h4>
-                  <Button className="info-button">Register for Info Session</Button>
+                  <Button className="info-button" onClick={(e) => {this.gaEvent('Info Session Button')}} onClick={(e) => {this.gaEvent('Instructor Profiles Button')}}>Register for Info Session</Button>
                 </div>
               </div>
             </Col>

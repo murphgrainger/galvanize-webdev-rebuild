@@ -27,6 +27,7 @@ class HomePage extends React.Component {
       label: label
     })
   }
+  
     render() {
         return (
           <div>

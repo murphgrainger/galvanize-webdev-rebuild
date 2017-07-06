@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button, Card } from 'reactstrap';
+import ReactGA from 'react-ga';
 
 import { createClient } from 'contentful'
 import { deliveryAccessToken, graduateTypeId, spaceId } from '../../config'
@@ -68,17 +69,25 @@ class Timeline extends React.Component {
 
   }
 
+  gaEvent(label) {
+    ReactGA.event({
+      category: 'Daily Plan',
+      action: ' Hover',
+      label: label
+    })
+  }
+
     render() {
         return (
           <div>
           <div className="timeline-outer">
-              <div className="schedule standup" onMouseEnter={() => this.hoverText('Stand Up')} onMouseLeave={() => this.hoverText('Standard')}>Stand Up</div>
-              <div className="schedule warmup" onMouseEnter={() => this.hoverText('Warmup')} onMouseLeave={() => this.hoverText('Standard')}>Warmup</div>
-              <div className="schedule lectures" onMouseEnter={() => this.hoverText('Lecture')} onMouseLeave={() => this.hoverText('Standard')}>Lectures</div>
-              <div className="schedule lunch" onMouseEnter={() => this.hoverText('Lunch')} onMouseLeave={() => this.hoverText('Standard')}>Lunch</div>
-              <div className="schedule lightening" onMouseEnter={() => this.hoverText('Lightning Talks')} onMouseLeave={() => this.hoverText('Standard')}>Lightning Talks</div>
-              <div className="schedule personalized" onMouseEnter={() => this.hoverText('Personalized Learning')} onMouseLeave={() => this.hoverText('Standard')}>Personalized Learning</div>
-              <div className="schedule standdown" onMouseEnter={() => this.hoverText('Stand Down')} onMouseLeave={() => this.hoverText('Standard')}>Stand Down</div>
+              <div className="schedule standup" onMouseEnter={() => {this.hoverText('Stand Up'); this.gaEvent('Stand Up Section')}} onMouseLeave={() => this.hoverText('Standard')}>Stand Up</div>
+              <div className="schedule warmup" onMouseEnter={() => {this.hoverText('Warmup'); this.gaEvent('Stand Up Section')}} onMouseLeave={() => this.hoverText('Standard')}>Warmup</div>
+              <div className="schedule lectures" onMouseEnter={() => {this.hoverText('Lecture'); this.gaEvent('Stand Up Section')}} onMouseLeave={() => this.hoverText('Standard')}>Lectures</div>
+              <div className="schedule lunch" onMouseEnter={() => {this.hoverText('Lunch'); this.gaEvent('Stand Up Section')}} onMouseLeave={() => this.hoverText('Standard')}>Lunch</div>
+              <div className="schedule lightening" onMouseEnter={() => {this.hoverText('Lightning Talks'); this.gaEvent('Stand Up Section')}} onMouseLeave={() => this.hoverText('Standard')}>Lightning Talks</div>
+              <div className="schedule personalized" onMouseEnter={() => {this.hoverText('Personalized Learning'); this.gaEvent('Stand Up Section')}} onMouseLeave={() => this.hoverText('Standard')}>Personalized Learning</div>
+              <div className="schedule standdown" onMouseEnter={() => {this.hoverText('Stand Down'); this.gaEvent('Stand Up Section')}} onMouseLeave={() => this.hoverText('Standard')}>Stand Down</div>
           </div>
           <div className="lines" style={lineStyle}>
             <div className="vertical-line" style={horizStyle} ></div>

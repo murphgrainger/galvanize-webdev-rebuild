@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button, Card, CardTitle, CardSubtitle } from 'reactstrap';
+import ReactGA from 'react-ga'
 
 import './dates.css'
 
 
 class GoalCard extends React.Component {
+
+  gaEvent(label) {
+    ReactGA.event({
+      category: 'Apply',
+      action: ' Click',
+      label: label
+    })
+  }
 
     render() {
         return (
@@ -15,7 +24,7 @@ class GoalCard extends React.Component {
             <p className="date-info"><span className="campus-name">{this.props.item.campus}</span> | Mon-Fri: 9am-5pm</p>
             </Col>
             <Col xs="12" sm='12' md="4">
-              <Button color="primary">Start Application</Button>
+              <Button color="primary" onClick={(e) => {this.gaEvent('Dates Apply Button')}}>Start Application</Button>
             </Col>
             </Card>
         );
