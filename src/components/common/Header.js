@@ -40,7 +40,7 @@ render() {
              <NavLink href="#graduates">Graduates</NavLink>
            </NavItem>
            <NavItem>
-             <NavLink href="#apply">apply</NavLink>
+             <NavLink href="#apply">Apply</NavLink>
            </NavItem>
          </Nav>
        </Collapse>

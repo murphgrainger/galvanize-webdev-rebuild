@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button } from 'reactstrap';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
+import ReactGA from 'react-ga';
 
 import OurTeam from '../our-team/OurTeam';
 import StudentLife from '../student-life/StudentLife';
@@ -18,6 +19,14 @@ class HomePage extends React.Component {
   componentWillMount() {
     configureAnchors({offset: -60, scrollDuration: 200})
   }
+
+  gaEvent(label) {
+    ReactGA.event({
+      category: 'Apply',
+      action: ' Click',
+      label: label
+    })
+  }
     render() {
         return (
           <div>
@@ -29,7 +38,7 @@ class HomePage extends React.Component {
                 </div>
               <h1>Become a Web Developer</h1>
               <p>Our 24-week Web Development Immersive Program will transform you from a beginner coder into a job-ready web developer.</p>
-              <p><Button color="primary">Start Your Application</Button></p>
+              <p><Button color="primary" onClick={(e) => {this.gaEvent('Header Apply Button')}}>Start Your Application</Button></p>
               </Col>
             </div>
           </ScrollableAnchor>
