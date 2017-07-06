@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Col, Row, Button, Media, Card, CardFooter } from 'reactstrap';
+import ReactGA from 'react-ga';
 
 import './alumni.css'
 
@@ -19,8 +20,19 @@ class Alumni extends React.Component {
                     <p className="subtitle">{this.props.item.cohort}</p>
                     <p className="story">{this.props.item.story}</p>
                     <div>
-                      <a href={'mailto:' + this.props.item.email}>   <Button className="contact-me-button">Contact Me</Button></a>
-                    <a href={this.props.item.github} target="_blank"> <Button className="contact-me-button">See My Projects</Button></a>
+                    <ReactGA.OutboundLink
+                      className="contact-me-button"
+                      eventLabel="alumni-contact"
+                      to={'mailto:' + this.props.item.email}>
+                      <Button className="contact-me-button">Contact Me</Button>
+                      </ReactGA.OutboundLink>
+                    <ReactGA.OutboundLink
+                        className="contact-me-button"
+                        eventLabel="alumni-github"
+                        to={this.props.item.github}
+                        target="_blank">
+                        <Button className="contact-me-button">See My Projects</Button>
+                     </ReactGA.OutboundLink>
                     </div>
                   </div>
                 </Card>
